@@ -113,3 +113,199 @@
   }
 
   /* ---------- Work cards ---------- */
+  .work-grid{display:grid;grid-template-columns:1fr;gap:20px}
+  .card{
+    background:var(--card);
+    border:1px solid var(--mist);
+    border-radius:14px;
+    padding:34px 32px;
+    display:flex;flex-direction:column;gap:14px;
+    transition:transform .18s ease,box-shadow .18s ease;
+  }
+  .card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(36,86,229,.10)}
+  .card-tag{
+    align-self:flex-start;
+    font-size:11.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+    color:#FFFFFF;background:var(--slate);
+    padding:4px 11px;border-radius:99px;
+  }
+  .card-tag.founder{background:var(--accent)}
+  .card h3{
+    font-family:'Archivo',sans-serif;
+    font-variation-settings:'wdth' 110,'wght' 780;
+    font-size:24px;line-height:1.15;
+  }
+  .card p{font-size:15px;color:#4A5568;max-width:820px}
+  .card-foot{
+    margin-top:auto;padding-top:12px;border-top:1px dashed var(--mist);
+    font-size:12.5px;font-weight:600;color:var(--slate);letter-spacing:.03em;
+  }
+
+  /* ---------- Approach ---------- */
+  .approach{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .step{padding:26px 24px;border-left:2px solid var(--accent);background:var(--card);border-radius:0 12px 12px 0}
+  .step h4{
+    font-family:'Archivo',sans-serif;
+    font-variation-settings:'wdth' 112,'wght' 750;
+    font-size:16px;margin-bottom:8px;
+  }
+  .step p{font-size:14px;color:#4A5568}
+
+  /* ---------- Toolbelt ---------- */
+  .chips{display:flex;flex-wrap:wrap;gap:10px}
+  .chip{
+    font-size:13.5px;font-weight:500;
+    padding:8px 16px;border-radius:99px;
+    background:var(--card);border:1px solid var(--mist);
+  }
+
+  /* ---------- Contact ---------- */
+  .contact{
+    background:#16308A;color:#F2F5FF;
+    border-radius:20px;
+    padding:60px 48px;
+    display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px;
+  }
+  .contact h2{
+    font-family:'Archivo',sans-serif;
+    font-variation-settings:'wdth' 115,'wght' 820;
+    font-size:clamp(26px,4vw,40px);line-height:1.1;
+  }
+  .contact h2 .zh{font-family:'Noto Serif SC',serif;font-weight:900;color:#9FB4F0;font-size:.62em;display:block;margin-bottom:10px;letter-spacing:.2em}
+  .btn{
+    display:inline-block;
+    font-family:'Archivo',sans-serif;
+    font-variation-settings:'wdth' 110,'wght' 700;
+    font-size:15px;letter-spacing:.03em;
+    color:#16308A;background:#FFFFFF;
+    padding:15px 30px;border-radius:99px;text-decoration:none;
+    transition:background .15s ease,transform .15s ease;
+  }
+  .btn:hover{background:var(--accent);color:#fff;transform:translateY(-2px)}
+
+  footer{padding:36px 0 48px;font-size:13px;color:#79828F;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+  /* ---------- Motion ---------- */
+  .fade{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+  .fade.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    .fade{opacity:1;transform:none;transition:none}
+    .card,.btn{transition:none}
+    html{scroll-behavior:auto}
+  }
+
+  @media (max-width:760px){
+    .hero-photo{position:static;transform:none;width:100%;height:280px;margin-top:32px}
+    .approach{grid-template-columns:1fr}
+    .hero{padding:64px 24px 80px}
+    .contact{padding:44px 28px}
+    .nav-links{gap:16px}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-mark"><span class="zh">石伊冉</span><span class="en">Shi Yiran</span></div>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#approach">Approach</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="hero">
+    <img class="hero-photo" src="yiran.jpg" alt="石伊冉">
+    <div class="hero-content">
+      <div class="eyebrow fade"><span class="zh">增长营销</span> Growth Marketing</div>
+      <h1 class="fade">I grow consumer apps across <em>two markets.</em></h1>
+      <p class="hero-sub fade">Growth marketer working at the intersection of the U.S. and China mobile ecosystems — from user acquisition and ASO to community and lifecycle, for dating, social, and gaming apps.</p>
+      <div class="hero-meta fade">
+        <span><span class="dot"></span>MS Integrated Marketing, NYU</span>
+        <span><span class="dot"></span>Growth @ consumer iOS apps</span>
+        <span><span class="dot"></span>EN / 中文 bilingual</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="work">
+    <div class="sec-head fade">
+      <span class="sec-zh">作品</span>
+      <span class="sec-en">Selected Work</span>
+    </div>
+    <div class="work-grid">
+      <div class="card fade">
+        <span class="card-tag">Internship</span>
+        <h3>Milian Group</h3>
+        <p>Growth marketing intern across a portfolio of consumer iOS apps entering the U.S. and Japan markets, spanning AI companion, social, and casual gaming. Managed Meta Ads campaigns with CPI benchmarking and A/B testing across creatives; led ASO optimization and App Store copy reviews; produced competitive teardowns of AI companion and interactive-fiction apps covering monetization and retention mechanics. Localized brand content between Chinese, English, and Japanese — from ad copy to social posts — and designed a campus concierge MVP at NYU to validate social product mechanics with Gen Z users before scaling paid acquisition.</p>
+        <div class="card-foot">Meta Ads · ASO · Competitive Research · Localization</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach">
+    <div class="sec-head fade">
+      <span class="sec-zh">方法</span>
+      <span class="sec-en">How I Work</span>
+    </div>
+    <div class="approach">
+      <div class="step fade">
+        <h4>Research before spend</h4>
+        <p>Every channel bet starts with user research and competitive analysis — I'd rather kill an idea in a doc than in a paid campaign.</p>
+      </div>
+      <div class="step fade">
+        <h4>Small tests, fast reads</h4>
+        <p>Concierge MVPs, campus pilots, A/B experiments. Ship the smallest version that produces a real signal, then decide.</p>
+      </div>
+      <div class="step fade">
+        <h4>Cross-market fluency</h4>
+        <p>What works in Chinese app ecosystems rarely translates directly to the U.S. — and vice versa. I work natively in both.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="toolbelt">
+    <div class="sec-head fade">
+      <span class="sec-zh">工具</span>
+      <span class="sec-en">Toolbelt</span>
+    </div>
+    <div class="chips fade">
+      <span class="chip">A/B Testing</span>
+      <span class="chip">ASO</span>
+      <span class="chip">Meta Ads</span>
+       <span class="chip">CapCut</span>
+      <span class="chip">Canva</span>
+      <span class="chip">AppsFlyer</span>
+      <span class="chip">AI-assisted building</span>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact fade">
+      <h2><span class="zh">联系我</span>Let's grow something together.</h2>
+      <a class="btn" href="mailto:hello@example.com">Email me</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <span>© 2026 石伊冉 Shi Yiran</span>
+  <span>New York · Beijing</span>
+</footer>
+
+<script>
+  const io=new IntersectionObserver(es=>{
+    es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
+  },{threshold:.12});
+  document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
