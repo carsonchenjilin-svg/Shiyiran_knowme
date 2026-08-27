@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>石伊冉 Shi Yiran — Growth Marketer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Noto+Serif+SC:wght@600;900&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EFF1EE;
+    --ink:#1A1C20;
+    --persimmon:#E8541D;
+    --pine:#1F3D2E;
+    --mist:#C9CFC9;
+    --card:#F7F8F6;
+    --max:1080px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Public Sans',-apple-system,'PingFang SC','Noto Sans SC',sans-serif;
+    font-size:16px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+  /* ---------- Nav ---------- */
+  nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(239,241,238,.88);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--mist);
+  }
+  .nav-inner{
+    max-width:var(--max);margin:0 auto;padding:14px 24px;
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .nav-mark{
+    display:flex;align-items:baseline;gap:9px;
+  }
+  .nav-mark .zh{
+    font-family:'Noto Serif SC',serif;font-weight:900;
+    font-size:17px;letter-spacing:.12em;
+  }
+  .nav-mark .en{
+    font-family:'Archivo',sans-serif;
+    font-variation-settings:'wdth' 120,'wght' 700;
+    font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--persimmon);
+  }
+  .nav-links{display:flex;gap:26px}
+  .nav-links a{
+    color:var(--ink);text-decoration:none;font-size:13.5px;font-weight:500;
+    letter-spacing:.02em;
+  }
+  .nav-links a:hover,.nav-links a:focus-visible{color:var(--persimmon)}
+  a:focus-visible{outline:2px solid var(--persimmon);outline-offset:3px;border-radius:2px}
+
+  /* ---------- Hero ---------- */
+  header{position:relative;overflow:hidden}
+  .hero{
+    position:relative;
+    padding:96px 24px 110px;
+    max-width:var(--max);margin:0 auto;
+  }
+  .hanzi{
+    position:absolute;right:-8px;top:20px;
+    font-family:'Noto Serif SC',serif;font-weight:900;
+    font-size:clamp(160px,26vw,300px);
+    line-height:.92;
+    color:transparent;
+    -webkit-text-stroke:1.5px var(--mist);
+    writing-mode:vertical-rl;
+    user-select:none;pointer-events:none;
+    z-index:0;
+  }
+  .hanzi b{color:var(--persimmon);-webkit-text-stroke:0;font-weight:900}
+  .hero-content{position:relative;z-index:1;max-width:640px}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--pine);margin-bottom:22px;
+  }
+  .eyebrow::before{content:'';width:28px;height:2px;background:var(--persimmon)}
+  .eyebrow .zh{font-family:'Noto Serif SC',serif;font-weight:600;letter-spacing:.3em;text-transform:none}
+  h1{
+    font-family:'Archivo',sans-serif;
+    font-variation-settings:'wdth' 115,'wght' 850;
+    font-size:clamp(44px,7.5vw,84px);
+    line-height:1.02;letter-spacing:-.01em;
+    margin-bottom:26px;
+  }
+  h1 em{font-style:normal;color:var(--persimmon)}
+  .hero-sub{font-size:18px;max-width:520px;color:#3A3E44;margin-bottom:34px}
+  .hero-meta{
+    display:flex;flex-wrap:wrap;gap:10px 28px;
+    font-size:13.5px;font-weight:500;color:var(--pine);
+  }
+  .hero-meta span{display:inline-flex;align-items:center;gap:7px}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--persimmon);flex:none}
+
+  /* ---------- Sections ---------- */
+  section{padding:78px 0;border-top:1px solid var(--mist)}
+  .sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:44px}
+  .sec-zh{
+    font-family:'Noto Serif SC',serif;font-weight:900;
+    font-size:30px;color:var(--persimmon);line-height:1;
+  }
+  .sec-en{
+    font-family:'Archivo',sans-serif;
+    font-variation-settings:'wdth' 120,'wght' 750;
+    font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--pine);
+  }
+
+  /* ---------- Work cards ---------- */
+  .work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  .card{
+    background:var(--card);
+    border:1px solid var(--mist);
+    border-radius:14px;
+    padding:30px 28px;
+    display:flex;flex-direction:column;gap:14px;
+    transition:transform .18s ease,box-shadow .18s ease;
+  }
+  .card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(31,61,46,.10)}
+  .card-tag{
+    align-self:flex-start;
+    font-size:11.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--card);background:var(--pine);
+    padding:4px 11px;border-radius:99px;
+  }
+  .card-tag.founder{background:var(--persimmon)}
+  .card h3{
+    font-family:'Archivo',sans-serif;
+    font-variation-settings:'wdth' 110,'wght' 780;
+    font-size:22px;line-height:1.15;
+  }
+  .card p{font-size:14.5px;color:#3A3E44}
+  .card-foot{
+    margin-top:auto;padding-top:12px;border-top:1px dashed var(--mist);
+    font-size:12.5px;font-weight:600;color:var(--pine);letter-spacing:.03em;
+  }
+
+  /* ---------- Approach ---------- */
+  .approach{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .step{padding:26px 24px;border-left:2px solid var(--persimmon);background:var(--card);border-radius:0 12px 12px 0}
+  .step h4{
+    font-family:'Archivo',sans-serif;
+    font-variation-settings:'wdth' 112,'wght' 750;
+    font-size:16px;margin-bottom:8px;
+  }
+  .step p{font-size:14px;color:#3A3E44}
+
+  /* ---------- Toolbelt ---------- */
+  .chips{display:flex;flex-wrap:wrap;gap:10px}
+  .chip{
+    font-size:13.5px;font-weight:500;
+    padding:8px 16px;border-radius:99px;
+    background:var(--card);border:1px solid var(--mist);
+  }
+
+  /* ---------- Contact ---------- */
+  .contact{
+    background:var(--pine);color:#EDF2EE;
+    border-radius:20px;
+    padding:60px 48px;
+    display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px;
+  }
+  .contact h2{
+    font-family:'Archivo',sans-serif;
+    font-variation-settings:'wdth' 115,'wght' 820;
+    font-size:clamp(26px,4vw,40px);line-height:1.1;
+  }
+  .contact h2 .zh{font-family:'Noto Serif SC',serif;font-weight:900;color:#F0B9A3;font-size:.62em;display:block;margin-bottom:10px;letter-spacing:.2em}
+  .btn{
+    display:inline-block;
+    font-family:'Archivo',sans-serif;
+    font-variation-settings:'wdth' 110,'wght' 700;
+    font-size:15px;letter-spacing:.03em;
+    color:var(--ink);background:#EDF2EE;
+    padding:15px 30px;border-radius:99px;text-decoration:none;
+    transition:background .15s ease,transform .15s ease;
+  }
+  .btn:hover{background:var(--persimmon);color:#fff;transform:translateY(-2px)}
+
+  footer{padding:36px 0 48px;font-size:13px;color:#5A6058;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+  /* ---------- Motion ---------- */
+  .fade{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+  .fade.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    .fade{opacity:1;transform:none;transition:none}
+    .card,.btn{transition:none}
+    html{scroll-behavior:auto}
+  }
+
+  @media (max-width:760px){
+    .hanzi{opacity:.5;right:-30px}
+    .work-grid,.approach{grid-template-columns:1fr}
+    .hero{padding:64px 24px 80px}
+    .contact{padding:44px 28px}
+    .nav-links{gap:16px}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-mark"><span class="zh">石伊冉</span><span class="en">Shi Yiran</span></div>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#approach">Approach</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="hero">
+    <div class="hanzi" aria-hidden="true">增<b>长</b></div>
+    <div class="hero-content">
+      <div class="eyebrow fade"><span class="zh">增长营销</span> Growth Marketing</div>
+      <h1 class="fade">I grow consumer apps across <em>two markets.</em></h1>
+      <p class="hero-sub fade">Growth marketer working at the intersection of the U.S. and China mobile ecosystems — from user acquisition and ASO to community and lifecycle, for dating, social, and gaming apps.</p>
+      <div class="hero-meta fade">
+        <span><span class="dot"></span>MS Integrated Marketing, NYU</span>
+        <span><span class="dot"></span>Growth @ consumer iOS apps</span>
+        <span><span class="dot"></span>EN / 中文 bilingual</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="work">
+    <div class="sec-head fade">
+      <span class="sec-zh">作品</span>
+      <span class="sec-en">Selected Work</span>
+    </div>
+    <div class="work-grid">
+      <div class="card fade">
+        <span class="card-tag founder">Founder</span>
+        <h3>GlowMate</h3>
+        <p>An AI food-scanning app with a virtual fox companion. Leading product and growth from zero — positioning, campus pilot at NYU, and community-led acquisition for Gen Z users.</p>
+        <div class="card-foot">Product · Growth · Community</div>
+      </div>
+      <div class="card fade">
+        <span class="card-tag">Internship</span>
+        <h3>Milian Group</h3>
+        <p>Growth marketing across a portfolio of consumer iOS apps in the U.S. market — market research, go-to-market experiments, and campus MVP validation for social products.</p>
+        <div class="card-foot">UA · Market Research · GTM</div>
+      </div>
+      <div class="card fade">
+        <span class="card-tag">Data & Growth</span>
+        <h3>Tuyoo Games</h3>
+        <p>User growth analytics for casual mobile games — A/B experiment reviews, in-game economy analysis, and LTV-driven recommendations for live-ops decisions.</p>
+        <div class="card-foot">A/B Testing · Analytics · LiveOps</div>
+      </div>
+      <div class="card fade">
+        <span class="card-tag">Community</span>
+        <h3>HiCrew</h3>
+        <p>App store optimization for Google Play — keyword strategy and store copy — plus Discord community operations, turning user feedback into product signals.</p>
+        <div class="card-foot">ASO · Community Ops</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach">
+    <div class="sec-head fade">
+      <span class="sec-zh">方法</span>
+      <span class="sec-en">How I Work</span>
+    </div>
+    <div class="approach">
+      <div class="step fade">
+        <h4>Research before spend</h4>
+        <p>Every channel bet starts with user research and competitive analysis — I'd rather kill an idea in a doc than in a paid campaign.</p>
+      </div>
+      <div class="step fade">
+        <h4>Small tests, fast reads</h4>
+        <p>Concierge MVPs, campus pilots, A/B experiments. Ship the smallest version that produces a real signal, then decide.</p>
+      </div>
+      <div class="step fade">
+        <h4>Cross-market fluency</h4>
+        <p>What works in Chinese app ecosystems rarely translates directly to the U.S. — and vice versa. I work natively in both.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="toolbelt">
+    <div class="sec-head fade">
+      <span class="sec-zh">工具</span>
+      <span class="sec-en">Toolbelt</span>
+    </div>
+    <div class="chips fade">
+      <span class="chip">SQL</span>
+      <span class="chip">A/B Testing</span>
+      <span class="chip">ASO</span>
+      <span class="chip">CRM Strategy</span>
+      <span class="chip">Canva</span>
+      <span class="chip">Figma</span>
+      <span class="chip">AppsFlyer</span>
+      <span class="chip">Discord Ops</span>
+      <span class="chip">AI-assisted building</span>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact fade">
+      <h2><span class="zh">联系我</span>Let's grow something together.</h2>
+      <a class="btn" href="mailto:hello@example.com">Email me</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <span>© 2026 石伊冉 Shi Yiran</span>
+  <span>New York · Beijing · Tokyo</span>
+</footer>
+
+<script>
+  const io=new IntersectionObserver(es=>{
+    es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
+  },{threshold:.12});
+  document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
