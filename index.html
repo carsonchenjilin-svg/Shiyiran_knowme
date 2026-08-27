@@ -113,7 +113,7 @@
   }
   .eyebrow::before{content:'';width:28px;height:2px;background:var(--accent)}
   .eyebrow .zh{font-family:'Noto Serif SC',serif;font-weight:600;letter-spacing:.3em;text-transform:none}
-  /* 首屏大标题：中文用衬线字体更有气质 */
+  /* 首屏大标题 */
   h1{
     font-family:'Noto Serif SC',serif;font-weight:900;
     font-size:clamp(38px,6.5vw,68px);
@@ -183,6 +183,13 @@
     font-family:'Noto Serif SC',serif;font-weight:900;
     font-size:23px;line-height:1.25;
   }
+  /* 实习时间：标题旁的小号浅色文字 */
+  .card-time{
+    font-family:'Public Sans',sans-serif;font-weight:500;
+    font-size:13px;color:var(--slate);
+    letter-spacing:.04em;margin-left:10px;
+    white-space:nowrap;
+  }
   /* 卡片内的要点列表：短句+圆点 */
   .card ul{
     list-style:none;
@@ -203,8 +210,8 @@
     font-size:12.5px;font-weight:600;color:var(--slate);letter-spacing:.03em;
   }
 
-  /* ===== Approach 三卡 ===== */
-  .approach{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  /* ===== 自我评价区 ===== */
+  .approach{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
   .step{padding:26px 24px;border-left:2px solid var(--accent);background:var(--card);border-radius:0 12px 12px 0}
   .step h4{
     font-family:'Noto Serif SC',serif;font-weight:900;
@@ -285,7 +292,7 @@
       <a href="#education">学历</a>
       <a href="#work">经历</a>
       <a href="#approach">自我评价</a>
-      <a href="#contact">联系方式</a>
+      <a href="#contact">联系</a>
     </div>
   </div>
 </nav>
@@ -293,11 +300,11 @@
 <!-- ===== 首屏 ===== -->
 <header>
   <div class="hero">
-    <!-- 照片，src 必须和仓库文件名一致 -->
-    <img class="hero-photo" src="11.jepg" alt="石伊冉">
+    <!-- 照片，src 必须和仓库文件名完全一致（去仓库核对！） -->
+    <img class="hero-photo" src="11.jpeg" alt="石伊冉">
     <div class="hero-content">
       <div class="eyebrow fade"><span class="zh">增长营销</span> Growth Marketing</div>
-      <h1 class="fade">Growth Marketing</h2>
+      <h1 class="fade">Growth Marketing</h1>
       <p class="hero-sub fade">专注中美移动互联网生态的交汇——从用户获取、ASO 到社区运营与生命周期管理，覆盖社交、AI 陪伴与游戏类应用。</p>
       <div class="hero-meta fade">
         <span><span class="dot"></span>纽约大学 整合营销硕士</span>
@@ -343,18 +350,17 @@
         <h3>米连集团 · 增长营销 <span class="card-time">2026.01 – 至今</span></h3>
         <ul>
           <li>面向美国与日本市场的消费类 iOS App 投放 Meta Ads：CPI 对标与素材 A/B 测试</li>
-          <li>社交媒体管理：参与ASO关键词优化；管理Instagram,Tiktok等社交媒体；从0-1搭建Discord社区</li>
-           <li>KOL合作：筛选适合的达人名单并促进合作</li>
-          
+          <li>社交媒体管理：参与 ASO 关键词优化；管理 Instagram、TikTok 等社交媒体；从 0 到 1 搭建 Discord 社区</li>
+          <li>KOL 合作：筛选适合的达人名单并促进合作</li>
         </ul>
-        <div class="card-foot">Meta Ads · ASO · 竞品研究 · 本地化</div>
+        <div class="card-foot">Meta Ads · ASO · 社媒运营 · KOL</div>
       </div>
 
       <div class="card fade">
         <span class="card-tag">实习</span>
         <h3>Accelerate Tennis <span class="card-time">2025.6 – 2025.9</span></h3>
         <ul>
-          <li>Amazon调研：竞品定价与设计分析，确定产品定位</li>
+          <li>Amazon 调研：竞品定价与设计分析，确定产品定位</li>
           <li>参与产品设计与选材，比对工厂报价，跟进打样到量产发货全流程</li>
           <li>在网球俱乐部与业余赛事做线下试用活动，用户反馈直接驱动产品迭代</li>
         </ul>
@@ -365,7 +371,7 @@
     </div>
   </section>
 
-  <!-- ===== Approach 区 ===== -->
+  <!-- ===== 自我评价区 ===== -->
   <section id="approach">
     <div class="sec-head fade">
       <span class="sec-zh">自我评价</span>
@@ -395,7 +401,7 @@
       <span class="chip">ASO</span>
       <span class="chip">Meta Ads</span>
       <span class="chip">Canva</span>
-      <span class="chip">AppsFlyer</span 
+      <span class="chip">AppsFlyer</span>
     </div>
   </section>
 
@@ -403,8 +409,7 @@
   <section id="contact">
     <div class="contact fade">
       <h2><span class="en">Contact</span>获取联系方式。</h2>
-      <!-- mailto: 后面换成你的真实邮箱 -->
-      <a class="btn" href="shiyiranlh@126.com">发邮件给我</a>
+      <a class="btn" href="mailto:shiyiranlh@126.com">发邮件给我</a>
     </div>
   </section>
 
