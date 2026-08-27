@@ -68,6 +68,18 @@
     padding:96px 24px 110px;
     max-width:var(--max);margin:0 auto;
   }
+  .hero-photo{
+  position:absolute;right:24px;top:50%;
+  transform:translateY(-50%);
+  width:300px;height:380px;
+  object-fit:cover;
+  border-radius:18px;
+  box-shadow:0 16px 40px rgba(0,0,0,.15);
+  z-index:0;
+}
+@media (max-width:760px){
+  .hero-photo{position:static;transform:none;width:100%;height:280px;margin-top:32px}
+}
   .hanzi{
     position:absolute;right:-8px;top:20px;
     font-family:'Noto Serif SC',serif;font-weight:900;
@@ -223,7 +235,7 @@
 </nav>
 
 <header>
-  <div class="hero">
+  <div class="hero"> <img class="hero-photo" src="WechatIMG904.jpeg" alt="石伊冉">
     <div class="hero-content">
       <div class="eyebrow fade"><span class="zh">增长营销</span> Growth Marketing</div>
       <h1 class="fade">I grow consumer apps across <em>two markets.</em></h1>
