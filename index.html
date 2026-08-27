@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <!-- ===== head：网页的"设置区"，用户看不到 ===== -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>石伊冉 Shi Yiran — Growth Marketer</title>
+<title>石伊冉 Shi Yiran — 增长营销</title>
 <!-- 从 Google 加载三套字体 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,7 +30,7 @@
     color:var(--ink);
     font-family:'Public Sans',-apple-system,'PingFang SC','Noto Sans SC',sans-serif;
     font-size:16px;
-    line-height:1.65;
+    line-height:1.75;
     -webkit-font-smoothing:antialiased;
   }
   .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
@@ -66,8 +66,8 @@
   .nav-links{display:flex;gap:26px}
   .nav-links a{
     position:relative;
-    color:var(--ink);text-decoration:none;font-size:13.5px;font-weight:500;
-    letter-spacing:.02em;
+    color:var(--ink);text-decoration:none;font-size:14px;font-weight:500;
+    letter-spacing:.06em;
     transition:color .15s ease;
   }
   /* ===== 交互2：导航下划线 + 当前区域高亮 ===== */
@@ -113,15 +113,15 @@
   }
   .eyebrow::before{content:'';width:28px;height:2px;background:var(--accent)}
   .eyebrow .zh{font-family:'Noto Serif SC',serif;font-weight:600;letter-spacing:.3em;text-transform:none}
+  /* 首屏大标题：中文用衬线字体更有气质 */
   h1{
-    font-family:'Archivo',sans-serif;
-    font-variation-settings:'wdth' 115,'wght' 850;
-    font-size:clamp(44px,7.5vw,84px);
-    line-height:1.02;letter-spacing:-.01em;
+    font-family:'Noto Serif SC',serif;font-weight:900;
+    font-size:clamp(38px,6.5vw,68px);
+    line-height:1.18;letter-spacing:.02em;
     margin-bottom:26px;
   }
   h1 em{font-style:normal;color:var(--accent)}
-  .hero-sub{font-size:18px;max-width:520px;color:#5C4F42;margin-bottom:34px}
+  .hero-sub{font-size:17px;max-width:520px;color:#5C4F42;margin-bottom:34px}
   .hero-meta{
     display:flex;flex-wrap:wrap;gap:10px 28px;
     font-size:13.5px;font-weight:500;color:var(--slate);
@@ -142,6 +142,24 @@
     font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);
   }
 
+  /* ===== Education 学历区：两栏卡片 ===== */
+  .edu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  .edu{
+    padding:28px 26px;background:var(--card);
+    border:1px solid var(--mist);border-radius:14px;
+    display:flex;flex-direction:column;gap:6px;
+  }
+  .edu .school{
+    font-family:'Noto Serif SC',serif;font-weight:900;
+    font-size:19px;
+  }
+  .edu .degree{font-size:14.5px;color:#5C4F42}
+  .edu .school-en{
+    font-family:'Archivo',sans-serif;
+    font-variation-settings:'wdth' 115,'wght' 700;
+    font-size:12px;color:var(--slate);letter-spacing:.08em;text-transform:uppercase;
+  }
+
   /* ===== Work 卡片 ===== */
   .work-grid{display:grid;grid-template-columns:1fr;gap:20px}
   .card{
@@ -156,17 +174,16 @@
   .card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(139,90,43,.12)}
   .card-tag{
     align-self:flex-start;
-    font-size:11.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+    font-size:12px;font-weight:600;letter-spacing:.08em;
     color:#FFFFFF;background:var(--slate);
-    padding:4px 11px;border-radius:99px;
+    padding:4px 12px;border-radius:99px;
   }
   .card-tag.founder{background:var(--accent)}
   .card h3{
-    font-family:'Archivo',sans-serif;
-    font-variation-settings:'wdth' 110,'wght' 780;
-    font-size:24px;line-height:1.15;
+    font-family:'Noto Serif SC',serif;font-weight:900;
+    font-size:23px;line-height:1.25;
   }
-  /* 卡片内的要点列表：短句+圆点，替代大段文字 */
+  /* 卡片内的要点列表：短句+圆点 */
   .card ul{
     list-style:none;
     display:flex;flex-direction:column;gap:9px;
@@ -177,7 +194,7 @@
     padding-left:18px;position:relative;
   }
   .card li::before{
-    content:'';position:absolute;left:0;top:9px;
+    content:'';position:absolute;left:0;top:11px;
     width:6px;height:6px;border-radius:50%;
     background:var(--accent);
   }
@@ -190,9 +207,8 @@
   .approach{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
   .step{padding:26px 24px;border-left:2px solid var(--accent);background:var(--card);border-radius:0 12px 12px 0}
   .step h4{
-    font-family:'Archivo',sans-serif;
-    font-variation-settings:'wdth' 112,'wght' 750;
-    font-size:16px;margin-bottom:8px;
+    font-family:'Noto Serif SC',serif;font-weight:900;
+    font-size:16.5px;margin-bottom:8px;
   }
   .step p{font-size:14px;color:#5C4F42}
 
@@ -215,18 +231,21 @@
     display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px;
   }
   .contact h2{
-    font-family:'Archivo',sans-serif;
-    font-variation-settings:'wdth' 115,'wght' 820;
-    font-size:clamp(26px,4vw,40px);line-height:1.1;
+    font-family:'Noto Serif SC',serif;font-weight:900;
+    font-size:clamp(24px,3.6vw,36px);line-height:1.3;
   }
-  .contact h2 .zh{font-family:'Noto Serif SC',serif;font-weight:900;color:#C9A87E;font-size:.62em;display:block;margin-bottom:10px;letter-spacing:.2em}
+  .contact h2 .en{
+    font-family:'Archivo',sans-serif;
+    font-variation-settings:'wdth' 115,'wght' 700;
+    font-weight:normal;
+    color:#C9A87E;font-size:.45em;display:block;margin-bottom:10px;letter-spacing:.2em;text-transform:uppercase;
+  }
   .btn{
     display:inline-block;
-    font-family:'Archivo',sans-serif;
-    font-variation-settings:'wdth' 110,'wght' 700;
-    font-size:15px;letter-spacing:.03em;
+    font-family:'Noto Serif SC',serif;font-weight:900;
+    font-size:15px;letter-spacing:.1em;
     color:#3E2A1A;background:#F5EFE6;
-    padding:15px 30px;border-radius:99px;text-decoration:none;
+    padding:15px 32px;border-radius:99px;text-decoration:none;
     transition:background .15s ease,transform .15s ease,color .15s ease;
   }
   .btn:hover{background:var(--accent);color:#fff;transform:translateY(-2px)}
@@ -246,7 +265,7 @@
   /* ===== 手机端适配 ===== */
   @media (max-width:760px){
     .hero-photo{position:static;transform:none;width:100%;height:280px;margin-top:32px}
-    .approach{grid-template-columns:1fr}
+    .approach,.edu-grid{grid-template-columns:1fr}
     .hero{padding:64px 24px 80px}
     .contact{padding:44px 28px}
     .nav-links{gap:16px}
@@ -263,9 +282,10 @@
   <div class="nav-inner">
     <div class="nav-mark"><span class="zh">石伊冉</span><span class="en">Shi Yiran</span></div>
     <div class="nav-links">
-      <a href="#work">Work</a>
-      <a href="#approach">Approach</a>
-      <a href="#contact">Contact</a>
+      <a href="#education">学历</a>
+      <a href="#work">经历</a>
+      <a href="#approach">方法</a>
+      <a href="#contact">联系</a>
     </div>
   </div>
 </nav>
@@ -274,15 +294,15 @@
 <header>
   <div class="hero">
     <!-- 照片，src 必须和仓库文件名一致 -->
-    <img class="hero-photo" src="yiran.jpg" alt="石伊冉">
+    <img class="hero-photo" src="11.jepg" alt="石伊冉">
     <div class="hero-content">
       <div class="eyebrow fade"><span class="zh">增长营销</span> Growth Marketing</div>
-      <h1 class="fade">I grow consumer apps across <em>two markets.</em></h1>
-      <p class="hero-sub fade">Growth marketer working at the intersection of the U.S. and China mobile ecosystems — from user acquisition and ASO to community and lifecycle, for dating, social, and gaming apps.</p>
+      <h1 class="fade">在美国市场，<br>做消费类 App 的<em>增长</em>。</h1>
+      <p class="hero-sub fade">专注中美移动互联网生态的交汇——从用户获取、ASO 到社区运营与生命周期管理，覆盖社交、AI 陪伴与游戏类应用。</p>
       <div class="hero-meta fade">
-        <span><span class="dot"></span>MS Integrated Marketing, NYU</span>
-        <span><span class="dot"></span>Growth @ consumer iOS apps</span>
-        <span><span class="dot"></span>EN / 中文 bilingual</span>
+        <span><span class="dot"></span>纽约大学 整合营销硕士</span>
+        <span><span class="dot"></span>消费类 iOS App 增长</span>
+        <span><span class="dot"></span>中 / 英 双语</span>
       </div>
     </div>
   </div>
@@ -290,34 +310,53 @@
 
 <main class="wrap">
 
+  <!-- ===== Education 区：学历 ===== -->
+  <section id="education">
+    <div class="sec-head fade">
+      <span class="sec-zh">学历</span>
+      <span class="sec-en">Education</span>
+    </div>
+    <div class="edu-grid">
+      <div class="edu fade">
+        <span class="school-en">New York University</span>
+        <span class="school">纽约大学</span>
+        <span class="degree">整合营销硕士</span>
+      </div>
+      <div class="edu fade">
+        <span class="school-en">The University of Edinburgh</span>
+        <span class="school">爱丁堡大学</span>
+        <span class="degree">经济与金融学士</span>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== Work 区 ===== -->
   <section id="work">
     <div class="sec-head fade">
-      <span class="sec-zh">作品</span>
+      <span class="sec-zh">经历</span>
       <span class="sec-en">Selected Work</span>
     </div>
     <div class="work-grid">
 
       <div class="card fade">
-        <span class="card-tag">Internship</span>
-        <h3>Milian Group</h3>
+        <span class="card-tag">实习</span>
+        <h3>米连集团 · 增长营销</h3>
         <ul>
-          <li>Meta Ads campaigns for consumer iOS apps in the U.S. and Japan — CPI benchmarking and creative A/B testing</li>
-          <li>ASO optimization, App Store copy reviews, and competitive teardowns of AI companion apps</li>
-          <li>Localized content across Chinese, English, and Japanese; ran a campus concierge MVP at NYU</li>
+          <li>面向美国与日本市场的消费类 iOS App 投放 Meta Ads：CPI 对标与素材 A/B 测试</li>
+          <li>ASO 优化、App Store 文案审校，以及 AI 陪伴类竞品的深度拆解报告</li>
         </ul>
-        <div class="card-foot">Meta Ads · ASO · Competitive Research · Localization</div>
+        <div class="card-foot">Meta Ads · ASO · 竞品研究 · 本地化</div>
       </div>
 
       <div class="card fade">
-        <span class="card-tag">Product</span>
-        <h3>Accelerate Tennis</h3>
+        <span class="card-tag">实习</span>
+        <h3>Accelerate Tennis · 产品营销</h3>
         <ul>
-          <li>Market research on Amazon — competitor pricing and design analysis for positioning</li>
-          <li>Product design, material selection, factory quotes, and sampling-to-shipping coordination</li>
-          <li>Trial events at clubs and tournaments; user feedback loops into product iterations</li>
+          <li>Amazon调研：竞品定价与设计分析，确定产品定位</li>
+          <li>参与产品设计与选材，比对工厂报价，跟进打样到量产发货全流程</li>
+          <li>在网球俱乐部与业余赛事做线下试用活动，用户反馈直接驱动产品迭代</li>
         </ul>
-        <div class="card-foot">Market Research · Supply Chain · Product Iteration</div>
+        <div class="card-foot">市场调研 · 供应链 · 产品迭代</div>
       </div>
 
       <!-- 加新经历：复制上面整个 card fade 块改文字 -->
@@ -327,21 +366,17 @@
   <!-- ===== Approach 区 ===== -->
   <section id="approach">
     <div class="sec-head fade">
-      <span class="sec-zh">方法</span>
-      <span class="sec-en">How I Work</span>
+      <span class="sec-zh">自我评价</span>
+      <span class="sec-en">About Me</span>
     </div>
     <div class="approach">
       <div class="step fade">
-        <h4>Research before spend</h4>
-        <p>Every channel bet starts with user research and competitive analysis — I'd rather kill an idea in a doc than in a paid campaign.</p>
+        <h4>数据驱动</h4>
+        <p>擅长通过数据驱动决策</p>
       </div>
       <div class="step fade">
-        <h4>Small tests, fast reads</h4>
-        <p>Concierge MVPs, campus pilots, A/B experiments. Ship the smallest version that produces a real signal, then decide.</p>
-      </div>
-      <div class="step fade">
-        <h4>Cross-market fluency</h4>
-        <p>What works in Chinese app ecosystems rarely translates directly to the U.S. — and vice versa. I work natively in both.</p>
+        <h4>国际化视野</h4>
+        <p>拥有国际化视野，擅长跨文化沟通，适应多元化团队协作</p>
       </div>
     </div>
   </section>
@@ -354,21 +389,20 @@
     </div>
     <div class="chips fade">
       <span class="chip">SQL</span>
-      <span class="chip">A/B Testing</span>
+      <span class="chip">A/B 测试</span>
       <span class="chip">ASO</span>
       <span class="chip">Meta Ads</span>
-      <span class="chip">Supply Chain</span>
       <span class="chip">Canva</span>
-      <span class="chip">AppsFlyer</span>
+      <span class="chip">AppsFlyer</span 
     </div>
   </section>
 
   <!-- ===== Contact 区 ===== -->
   <section id="contact">
     <div class="contact fade">
-      <h2><span class="zh">联系我</span>Let's grow something together.</h2>
+      <h2><span class="en">Contact</span>获取联系方式。</h2>
       <!-- mailto: 后面换成你的真实邮箱 -->
-      <a class="btn" href="shiyiranlh@126.com">Email me</a>
+      <a class="btn" href="shiyiranlh@126.com">发邮件给我</a>
     </div>
   </section>
 
@@ -377,7 +411,7 @@
 <!-- ===== 页脚 ===== -->
 <footer class="wrap">
   <span>© 2026 石伊冉 Shi Yiran</span>
-  <span>New York · Beijing</span>
+  <span>北京</span>
 </footer>
 
 <script>
